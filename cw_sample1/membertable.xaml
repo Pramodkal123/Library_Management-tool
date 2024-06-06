@@ -1,0 +1,92 @@
+﻿<Window x:Class="cw_sample1.membertable"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:cw_sample1"
+        mc:Ignorable="d"
+        Title="membertable" Height="450" Width="800"
+           WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanMinimize"
+        Icon="C:\Users\Admin\Desktop\DSE222pCO\gui\cw_sample1\cw_sample1\logo.ico" Loaded="Window_Loaded_3">
+    <Window.Resources>
+        <local:studenttable x:Key="studenttable"/>
+        <CollectionViewSource x:Key="studentViewSource" Source="{Binding student, Source={StaticResource studenttable}}"/>
+    </Window.Resources>
+
+
+    <Border BorderThickness="5"
+            BorderBrush="AliceBlue">
+        <Border.Background >
+            <ImageBrush ImageSource="C:\Users\Admin\Desktop\DSE222pCO\gui\cw_sample1\cw_sample1\back.jpg">
+            </ImageBrush>
+        </Border.Background>
+        <Grid DataContext="{StaticResource studentViewSource}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition/>
+
+            </Grid.RowDefinitions>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="5"/>
+
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="View Members"
+                           Foreground="Black"
+                           FontSize="15"
+                           FontWeight="Bold"
+                           FontFamily="Monsterrat"
+                           Grid.Column="0"
+                           VerticalAlignment="Center"
+                           Margin="10,0,0,0"/>
+                <Button x:Name="btnreturn"
+                        Background="Black"
+                        BorderThickness="0"
+                        Content="&lt;"
+                      
+                        FontFamily="Monsterrat"
+                        FontSize="20"
+                        Foreground="White"
+                         Grid.Column="1" 
+                      Click="btnreturn_Click" Grid.ColumnSpan="2" Margin="0.333,0,29.667,0"
+                       />
+                <Button x:Name="btnmin"
+                           Margin="5,0,0,0"
+                        Background="Black"
+                        BorderThickness="0"
+                        Content="-"
+                        VerticalAlignment="Center"
+                        FontFamily="Monsterrat"
+                        FontSize="29"
+                        Foreground="White"
+                         Grid.Column="2" 
+                      Click="btnmin_Click"
+                       />
+                <Button x:Name="btnclose"
+                        Margin="5,0,0,0"
+                        Background="Black"
+                        BorderThickness="0"
+                        Content="X"
+                        FontFamily="Monsterrat"
+                        FontSize="15"
+                        Foreground="White"
+                         Grid.Column="3"
+                    Click="btnclose_Click"
+                            
+                       />
+
+
+            </Grid>
+            <DataGrid HorizontalAlignment="Left" Height="420" Margin="0,0,0,0" Background="Transparent" Grid.Row="1" VerticalAlignment="Top" Width="800" ItemsSource="{Binding}"/>
+
+        </Grid>
+
+    </Border>
+</Window>

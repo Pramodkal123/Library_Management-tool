@@ -1,0 +1,140 @@
+﻿<Window x:Class="cw_sample1.Home"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:cw_sample1"
+        mc:Ignorable="d"
+        Title="Home" Height="450" Width="800"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanMinimize"
+         Icon="C:\Users\Admin\Desktop\DSE222pCO\gui\cw_sample1\cw_sample1\logo.ico">
+    <Border BorderThickness="5"
+            BorderBrush="AliceBlue">
+        <Border.Background >
+            <ImageBrush ImageSource="C:\Users\Admin\Desktop\DSE222pCO\gui\cw_sample1\cw_sample1\back.jpg">
+            </ImageBrush>
+        </Border.Background>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition/>
+
+            </Grid.RowDefinitions>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="5"/>
+
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Home"
+                           Foreground="Black"
+                           FontSize="15"
+                           FontWeight="Bold"
+                           FontFamily="Monsterrat"
+                           Grid.Column="0"
+                           VerticalAlignment="Center"
+                           Margin="10,0,0,0"/>
+                <Button x:Name="btnmin"
+                        Background="Black"
+                        BorderThickness="0"
+                        Content="-"
+                        FontFamily="Monsterrat"
+                        FontSize="29"
+                        Foreground="White"
+                         Grid.Column="1" 
+                        Click="btnmin_Click"
+                       />
+                <Button x:Name="btnclose"
+                        Margin="5,0,0,0"
+                        Background="Black"
+                        BorderThickness="0"
+                        Content="X"
+                        FontFamily="Monsterrat"
+                        FontSize="15"
+                        Foreground="White"
+                         Grid.Column="2"
+                      Click="btnclose_Click"
+                       />
+
+            </Grid>
+            <Button x:Name="btn_regbook" Content="Register Book" Background="#7EF7FA" FontSize="15"  Margin="140,30,432.333,309.333" RenderTransformOrigin="0.5,0.504" Grid.Row="1" Click="btn_regbook_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="160" Height="60" CornerRadius="10" Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button x:Name="btn_viewbook" Content="View Book" Background="#7EF7FA" FontSize="15" Margin="140,107,432.333,232.333" RenderTransformOrigin="0.5,0.504" Grid.Row="1" Click="btn_viewbook_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="160" Height="60" CornerRadius="10" Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button x:Name="btn_deletebook" Content="Remove Books" Background="#7EF7FA" FontSize="15"  Margin="140,183,432.333,156.333" RenderTransformOrigin="0.5,0.504" Grid.Row="1" Click="btn_deletebook_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="160" Height="60" CornerRadius="10" Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button x:Name="btn_lend" Content="Lend Books" FontSize="15" Background="#7EF7FA"  Margin="140,260,432.333,79.333" RenderTransformOrigin="0.5,0.504" Grid.Row="1" Click="btn_lend_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="160" Height="60" CornerRadius="10" Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button x:Name="btn_regmember" Content="Register Member" Background="#7EF7FA" FontSize="15"  Margin="445,30,129.333,309.333" RenderTransformOrigin="0.5,0.504" Grid.Row="1" Click="btn_regmember_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="160" Height="60" CornerRadius="10" Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button x:Name="btn_return" Content="Return Books" FontSize="15" Background="#7EF7FA "  Margin="445,107,129.333,232.333" RenderTransformOrigin="0.5,0.504" Grid.Row="1" Click="btn_return_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="160" Height="60" CornerRadius="10" Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button x:Name="btn_delmember" Content="Remove Member" FontSize="15" Background="#7EF7FA" Margin="445,183,129.333,156.333" RenderTransformOrigin="0.5,0.504" Grid.Row="1" Click="btn_delmember_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="160" Height="60" CornerRadius="10" Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button x:Name="btn_viewmember" Content="View Member" FontSize="15" Background="#7EF7FA" Margin="445,260,129.333,79.333" RenderTransformOrigin="0.5,0.504" Grid.Row="1" Click="btn_viewmember_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="160" Height="60" CornerRadius="10" Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </Grid>
+
+
+    </Border>
+</Window>

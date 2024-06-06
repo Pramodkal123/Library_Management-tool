@@ -1,0 +1,96 @@
+﻿<Window x:Class="cw_sample1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:cw_sample1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+       WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanMinimize"
+        Icon="C:\Users\Admin\Desktop\DSE222pCO\gui\cw_sample1\cw_sample1\logo.ico">
+
+
+    <Border BorderThickness="5"
+            BorderBrush="AliceBlue">
+        <Border.Background >
+            <ImageBrush ImageSource="C:\Users\Admin\Desktop\DSE222pCO\gui\cw_sample1\cw_sample1\back.jpg">
+            </ImageBrush>
+        </Border.Background>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition/>
+
+            </Grid.RowDefinitions>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="5"/>
+
+                </Grid.ColumnDefinitions>
+               
+                <TextBlock Text="Log In"
+                           Foreground="Black"
+                           FontSize="15"
+                           FontWeight="Bold"
+                           FontFamily="Monsterrat"
+                           Grid.Column="0"
+                           VerticalAlignment="Center"
+                           Margin="10,0,0,0"/>
+                <Button x:Name="btnmin"
+                        Background="Black"
+                        BorderThickness="0"
+                        Content="-"
+                        FontFamily="Monsterrat"
+                        FontSize="29"
+                        Foreground="White"
+                         Grid.Column="1" 
+                      Click="btnmin_Click"
+                       />
+                <Button x:Name="btnclose"
+                        Margin="5,0,0,0"
+                        Background="Black"
+                        BorderThickness="0"
+                        Content="X"
+                        FontFamily="Monsterrat"
+                        FontSize="15"
+                        Foreground="White"
+                         Grid.Column="2"
+                    Click="btnclose_Click"
+                            
+                       />
+
+            </Grid>
+            
+            <Grid Margin="0,0,-4,18.666" Grid.RowSpan="2">
+                <Image Source="C:\Users\Admin\Desktop\DSE222pCO\gui\cw_sample1\cw_sample1\logo.jpg" Width="100" Height="100" Margin="325,45,368.333,275.667"/>
+                <Button x:Name="btn_login" Content="Enter" FontSize="15" FontWeight="Bold" Click="btn_login_Click" Background="#7EF7FA"  Margin="316,303,258.333,35.667" RenderTransformOrigin="0.5,0.504">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Width="130" Height="40" CornerRadius="10" Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+                <Label Content="Username" Background="#7EF7FA" FontSize="18" FontFamily="Tahoma" Margin="243,176,438.333,211.333"/>
+
+
+
+                <Label Content="Password" Background="#7EF7FA" FontSize="18" FontFamily="Tahoma" Margin="242,222.334,439.333,166.334"/>
+                <TextBox x:Name="txt_un" TextWrapping="Wrap" Background="Transparent" BorderThickness="0,0,0,3" BorderBrush="#7EF7FA" Margin="364,176,297.333,207.667" RenderTransformOrigin="0.694,0.484"/>
+                <PasswordBox x:Name="txt_pw" Background="Transparent" BorderThickness="0,0,0,3" BorderBrush="#7EF7FA" Margin="364,216.667,297.333,164.334"/>
+
+            </Grid>
+        </Grid>
+
+
+    </Border>
+
+
+</Window>
